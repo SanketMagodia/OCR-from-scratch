@@ -1,0 +1,63 @@
+
+
+
+<html lang="en">
+    <head>
+        <title>OCR</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	
+		<style>
+			
+			p {color:white;}
+			body {
+  /* background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a44d0206-0e67-40ce-9420-e9b21ed021fa/daq645d-5f774123-9ea9-4f70-a9ed-174968cde7e8.png/v1/fill/w_1024,h_578,q_80,strp/ash_s_greninja_pokemon_minimalist_wallpaper_4k__by_darkfate17_daq645d-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc4IiwicGF0aCI6IlwvZlwvYTQ0ZDAyMDYtMGU2Ny00MGNlLTk0MjAtZTliMjFlZDAyMWZhXC9kYXE2NDVkLTVmNzc0MTIzLTllYTktNGY3MC1hOWVkLTE3NDk2OGNkZTdlOC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Fheg9K_h0uIIK9Lcps4X1MwUY5Ozcb7PLq_Jbf-1ZJc'); */
+}
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+			</style>
+	</head>
+
+	<body align=center  >
+		
+		<nav class="navbar navbar-expand-sm bg-light" style=" margin: auto;
+		width: 50%;
+		">
+			<h1>            <b>    Almost-OCR   <b> </h1>
+		  </nav>
+		  <form method=post enctype=multipart/form-data>
+			<input type=file name=file>
+			<input type=submit value=Upload>
+		  </form>
+		  
+		  
+		 {% if filename %}
+		  <div class="container">
+			<img src="{{url_for('static', filename= filename)}}" alt="Norway" style="width:100%;">
+			<div class="text-block">
+			  <h4>found text</h4>
+			  <p>{{preds}}</p>
+			</div>
+		  </div>
+		  {% endif %}
+		  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+</html> 
+
+
+
+
